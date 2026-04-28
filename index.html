@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Untuk Kamu ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to top, #ff9a9e, #fad0c4);
+      text-align: center;
+      color: #333;
+    }
+
+    .card {
+      position: relative;
+      top: 20%;
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      display: inline-block;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      z-index: 2;
+    }
+
+    h1 {
+      color: #ff4d6d;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      background: #ff4d6d;
+      color: white;
+      cursor: pointer;
+    }
+
+    .heart {
+      position: absolute;
+      color: red;
+      font-size: 20px;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-10vh); }
+      100% { transform: translateY(110vh); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Hai Sayang 🤍</h1>
+    <p id="message">Klik tombol ini ya 😊</p>
+    <button onclick="showMessage()">Klik Aku 💕</button>
+  </div>
+
+  <!-- Musik (bisa kamu ganti linknya) -->
+  <audio id="bgm" loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mp3">
+  </audio>
+
+  <script>
+    function showMessage() {
+      document.getElementById("message").innerHTML =
+        "Semangat ya buat hari Rabu besok 💕<br><br>" +
+        "Aku tahu kamu capek, tapi kamu kuat banget dan selalu bikin aku bangga 😊<br>" +
+        "Jangan lupa makan dan istirahat ya ❤️<br><br>" +
+        "Aku selalu ada buat kamu 💪✨";
+
+      document.getElementById("bgm").play();
+    }
+
+    // Animasi hati jatuh
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerHTML = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 5000);
+    }
+
+    setInterval(createHeart, 300);
+  </script>
+
+</body>
+</html>
