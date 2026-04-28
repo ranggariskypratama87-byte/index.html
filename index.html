@@ -1,119 +1,45 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
   <meta charset="UTF-8">
-  <title>Untuk adikkkk tercintaa ❤️</title>
+  <title>Untuk Amengg ❤️</title>
   <style>
     body {
-      margin: 0;
-      overflow: hidden;
       font-family: Arial;
-      background: linear-gradient(to top, #ff9a9e, #fad0c4);
       text-align: center;
-      color: #333;
+      background: linear-gradient(to top, #ff9a9e, #fad0c4);
+      margin-top: 30vh;
     }
 
-    .card {
-      margin-top: 12%;
+    .box {
       background: white;
-      padding: 30px;
-      border-radius: 20px;
-      display: inline-block;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-      position: relative;
-      z-index: 2;
-    }
-
-    h1 {
-      color: #ff4d6d;
+      padding: 20px;
+      margin: auto;
+      width: 80%;
+      border-radius: 15px;
     }
 
     button {
-      margin-top: 15px;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 10px;
+      padding: 10px;
       background: #ff4d6d;
       color: white;
-      cursor: pointer;
-    }
-
-    .heart {
-      position: absolute;
-      color: red;
-      font-size: 20px;
-      animation: fall 4s linear infinite;
-    }
-
-    @keyframes fall {
-      from { transform: translateY(-10vh); }
-      to { transform: translateY(110vh); }
-    }
-
-    .popup {
-      margin-top: 15px;
-      color: #444;
-      font-size: 14px;
-    }
-
-    .footer {
-      margin-top: 10px;
-      font-size: 13px;
-      color: #666;
-    }
-
-    .laugh {
-      animation: shake 0.5s infinite;
-      display: inline-block;
-    }
-
-    @keyframes shake {
-      0% { transform: rotate(0deg); }
-      25% { transform: rotate(5deg); }
-      50% { transform: rotate(-5deg); }
-      75% { transform: rotate(5deg); }
-      100% { transform: rotate(0deg); }
+      border: none;
+      border-radius: 10px;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="card">
-    <h1>Hai adikkkkk sayanggg 🤍</h1>
-    <p id="msg">Klik tombol ini ya 😊</p>
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8a8b8f4.mp3?filename=inspiring-cinematic-ambient-110397.mp3">
+  </audio>
 
-    <button onclick="show()">Klik Disini  💕</button>
-
-    <div class="popup" id="extra"></div>
-    <div class="footer">Dibuat dengan ❤️ oleh Rangga</div>
+  <div class="box">
+    <h2>Hai Amengg 🤍</h2>
+    <p>Ada sesuatu buat kamu...</p>
+    <a href="page2.html"><button>Lanjut 💕</button></a>
   </div>
-
-  <script>
-    function show() {
-      document.getElementById("msg").innerHTML =
-        "Semangat ya buat sekolah hari Rabu besok 💕<br><br>" +
-        "adikkkk kamu pasti bisa, kamu kuat banget 😊<br>" +
-        "Jangan atur pola makan & jangan lupa istirahat ya ❤️<br><br>" +
-        "Aku selalu dukung kamu, Dan selalu ada buat kamu 💪✨";
-
-      document.getElementById("extra").innerHTML =
-        "<span class='laugh'>😂😂😂</span> jangan lupa senyum ya adikkkkkkk!";
-    }
-
-    function heart() {
-      const h = document.createElement("div");
-      h.classList.add("heart");
-      h.innerHTML = "❤️";
-      h.style.left = Math.random() * 100 + "vw";
-      h.style.animationDuration = (Math.random() * 3 + 2) + "s";
-      document.body.appendChild(h);
-
-      setTimeout(() => h.remove(), 5000);
-    }
-
-    setInterval(heart, 300);
-  </script>
 
 </body>
 </html>
