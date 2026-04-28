@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Untuk adikkkk tercinta ❤️</title>
+  <title>Untuk adikkkk tercintaa ❤️</title>
   <style>
     body {
       margin: 0;
@@ -14,12 +14,14 @@
     }
 
     .card {
-      margin-top: 15%;
+      margin-top: 12%;
       background: white;
       padding: 30px;
       border-radius: 20px;
       display: inline-block;
       box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      position: relative;
+      z-index: 2;
     }
 
     h1 {
@@ -47,24 +49,56 @@
       from { transform: translateY(-10vh); }
       to { transform: translateY(110vh); }
     }
+
+    .popup {
+      margin-top: 15px;
+      color: #444;
+      font-size: 14px;
+    }
+
+    .footer {
+      margin-top: 10px;
+      font-size: 13px;
+      color: #666;
+    }
+
+    .laugh {
+      animation: shake 0.5s infinite;
+      display: inline-block;
+    }
+
+    @keyframes shake {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(5deg); }
+      50% { transform: rotate(-5deg); }
+      75% { transform: rotate(5deg); }
+      100% { transform: rotate(0deg); }
+    }
   </style>
 </head>
 
 <body>
 
   <div class="card">
-    <h1>Hai amengggg kecill 🤍</h1>
+    <h1>Hai adikkkkk sayanggg 🤍</h1>
     <p id="msg">Klik tombol ini ya 😊</p>
-    <button onclick="show()">Klik Aku 💕</button>
+
+    <button onclick="show()">Klik Disini  💕</button>
+
+    <div class="popup" id="extra"></div>
+    <div class="footer">Dibuat dengan ❤️ oleh Rangga</div>
   </div>
 
   <script>
     function show() {
       document.getElementById("msg").innerHTML =
         "Semangat ya buat sekolah hari Rabu besok 💕<br><br>" +
-        "adikkkkk pasti bisa, kamu kuat banget 😊<br>" +
-        "Jangan lupa atur pola makanya yaa & jangan lupa istirahat ❤️<br><br>" +
-        "Aku selalu dukung kamu, dan aku selalu ada buat kamu 💪✨";
+        "adikkkk kamu pasti bisa, kamu kuat banget 😊<br>" +
+        "Jangan atur pola makan & jangan lupa istirahat ya ❤️<br><br>" +
+        "Aku selalu dukung kamu, Dan selalu ada buat kamu 💪✨";
+
+      document.getElementById("extra").innerHTML =
+        "<span class='laugh'>😂😂😂</span> jangan lupa senyum ya adikkkkkkk!";
     }
 
     function heart() {
